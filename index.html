@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clozemate - Digitalizza il tuo guardaroba, crea outfit e condividili facilmente. Un'app pensata per chi ama moda e tecnologia.">
+    <meta name="keywords" content="Clozemate, guardaroba digitale, outfit, moda, app fashion, organizzazione armadio">
+    <meta name="author" content="Giuseppe Maranò & Davide Epifanio">
     <title>Clozemate - Reinventa il tuo stile</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/tuo-kit-id.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="main-header">
         <div class="container">
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navigazione principale">
                 <div class="logo">Clozemate</div>
                 <ul class="nav-links">
                     <li><a href="#features">Funzionalità</a></li>
@@ -21,46 +26,61 @@
         </div>
     </header>
 
-    <section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero" aria-label="Sezione principale">
         <div class="container">
             <h1>Il tuo guardaroba, a portata di mano.</h1>
             <p class="subtitle">Digitalizza, abbina e condividi i tuoi outfit con un semplice click.</p>
-            <a href="#" class="cta-button">Scopri di più</a>
+            <a href="#features" class="cta-button">Scopri di più</a>
         </div>
     </section>
 
-    <main id="features">
+    <!-- FEATURES SECTION -->
+    <main id="features" aria-labelledby="features-title">
         <div class="container">
-            <h2 class="section-title">Funzionalità principali</h2>
+            <h2 id="features-title" class="section-title">Funzionalità principali</h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <article class="feature-card">
                     <div class="feature-icon">📷</div>
                     <h3>Digitalizza il Tuo Guardaroba</h3>
                     <p>Scatta una foto ai tuoi capi e lascia che Clozemate li organizzi per te. Il tuo armadio, sempre in tasca.</p>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card">
                     <div class="feature-icon">✨</div>
                     <h3>Crea e Condividi Outfit</h3>
                     <p>Sperimenta nuovi abbinamenti con i tuoi vestiti. Crea l'outfit perfetto e condividilo con i tuoi amici.</p>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card">
                     <div class="feature-icon">🎨</div>
                     <h3>Design Accessibile</h3>
                     <p>Abbiamo a cuore l'accessibilità. Clozemate include temi ottimizzati per diverse forme di daltonismo.</p>
-                </div>
+                </article>
             </div>
         </div>
     </main>
 
-    <section id="about" class="about-section">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section" aria-labelledby="about-title">
         <div class="container">
-            <p>Clozemate è un'idea di <strong>Davide Epifanio</strong> sviluppata da <strong>Giuseppe Maranò</strong>, due amici uniti dalla visione di unire tecnologia e moda in modo semplice e intuitivo.</p>
+            <h2 id="about-title" class="section-title">Chi Siamo</h2>
+            <p>Clozemate è un'idea di <strong>Davide Epifanio</strong> sviluppata da <strong>Giuseppe Maranò</strong>, due amici uniti dalla visione di combinare tecnologia e moda in modo semplice e intuitivo. La nostra missione è rendere l'organizzazione del guardaroba divertente e accessibile a tutti.</p>
         </div>
     </section>
 
-    <footer id="contact" class="main-footer">
+    <!-- CONTACT / FOOTER SECTION -->
+    <footer id="contact" class="main-footer" aria-labelledby="contact-title">
         <div class="container">
-            <p class="copyright">&copy; 2025 Clozemate. Sviluppato da Davide Epifanio & Giuseppe Maranò.</p>
+            <h3 id="contact-title">Contattaci</h3>
+
+            <div class="contact-info">
+                <p>Per informazioni contattaci su:</p>
+                <p><a href="mailto:info@clozemate.it">info@clozemate.it</a></p>
+            </div>
+            
+            <p class="copyright">&copy; 2025 Clozemate. Sviluppato da
+                <a href="https://www.instagram.com/davide__epifanio/" target="_blank" aria-label="Instagram Davide">Davide Epifanio</a> & 
+                <a href="https://www.instagram.com/giuseppe.marano.96/" target="_blank" aria-label="Instagram Giuseppe">Giuseppe Maranò</a>.
+            </p>
         </div>
     </footer>
 </body>

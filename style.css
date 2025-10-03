@@ -196,3 +196,18 @@ h3 { font-size: 1.2rem; }
     .nav-links { display: none; } /* Simple hiding for small screens, can be improved with a burger menu */
     .hero { padding: 6rem 0; }
 }
+
+/* Stile standard per tutti i link */
+a {
+    color: inherit;        /* eredita il colore del testo circostante */
+    text-decoration: none; /* rimuove la sottolineatura */
+    font-weight: inherit;  /* eredita il peso del testo circostante */
+    transition: none;      /* disabilita eventuali transizioni hover */
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: inherit;        /* mantiene sempre lo stesso colore */
+    text-decoration: none; /* niente sottolineatura anche al passaggio del mouse */
+}
