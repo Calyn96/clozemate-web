@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richiesta di Eliminazione Dati - Clozemate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <div class="logo">Clozemate</div>
+        <div class="burger-menu" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#features">Funzionalità</a></li>
+          <li><a href="index.html#about">Chi Siamo</a></li>
+          <li><a href="index.html#contact">Contatti</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="data-deletion-policy" style="padding-top: 100px;">
+    <div class="container">
+      <h1>Richiesta di Eliminazione dell'Account e dei Dati</h1>
+      <p>Questa pagina fornisce le istruzioni per richiedere l'eliminazione del tuo account e dei dati associati all'app <strong>Clozemate</strong>, sviluppata da Davide Epifanio e Giuseppe Maranò, in conformità con le normative del Google Play Store.</p>
+
+      <h2>Come Richiedere l'Eliminazione</h2>
+      <p>Per richiedere l'eliminazione del tuo account e dei tuoi dati, segui questi semplici passaggi:</p>
+      <ol>
+        <li>Invia un'email all'indirizzo: <a href="mailto:info@clozemate.it">info@clozemate.it</a>.</li>
+        <li>Includi come oggetto dell'email: <strong>"Richiesta di Eliminazione Account"</strong>.</li>
+        <li>Nel corpo dell'email, specifica l'indirizzo email associato al tuo account Clozemate per permetterci di identificare correttamente i tuoi dati.</li>
+      </ol>
+      <p>Una volta ricevuta la tua richiesta, la processeremo entro 30 giorni e ti invieremo una conferma di avvenuta eliminazione.</p>
+
+      <h2>Quali Dati Vengono Eliminati</h2>
+      <p>Con la richiesta di eliminazione, verranno rimossi in modo permanente i seguenti dati personali:</p>
+      <ul>
+        <li><strong>Dati del profilo:</strong> Il tuo indirizzo email e le preferenze di stile che hai impostato.</li>
+        <li><strong>Contenuti utente:</strong> Tutte le immagini dei tuoi capi e gli outfit che hai creato e salvato.</li>
+        <li><strong>Dati di utilizzo:</strong> Le informazioni relative alle tue interazioni con l'app, come le funzioni più utilizzate e i log di utilizzo associati al tuo account.</li>
+      </ul>
+
+      <h2>Dati Conservati</h2>
+      <p>In alcuni casi, potremmo conservare dati anonimi e aggregati per finalità statistiche e di miglioramento del servizio. Questi dati non sono in alcun modo collegati a te personalmente e non possono essere utilizzati per identificarti.</p>
+      <p>Eventuali dati tecnici essenziali per la prevenzione di frodi o per obblighi legali potrebbero essere conservati per il periodo strettamente necessario, in conformità con la nostra Privacy Policy e le normative vigenti.</p>
+    </div>
+  </main>
+
+  <footer id="contact" class="main-footer" aria-labelledby="contact-title">
+    <div class="container">
+      <h3 id="contact-title">Contattaci</h3>
+      <div class="contact-info">
+        <p>Per informazioni contattaci su:</p>
+        <p><a href="mailto:info@clozemate.it">info@clozemate.it</a></p>
+      </div>
+      <p class="copyright">&copy; 2025 Clozemate. Sviluppato da
+        <a href="https://www.instagram.com/davide__epifanio/" target="_blank">Davide Epifanio</a> &
+        <a href="https://www.instagram.com/giuseppe.marano.96/" target="_blank">Giuseppe Maranò</a>.
+      </p>
+      <p><a href="privacy.html">Privacy Policy</a> | <a href="data-deletion.html">Richiesta Eliminazione Dati</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
