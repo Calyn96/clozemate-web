@@ -194,6 +194,10 @@ h3 { font-size: 1.4rem; }
   color: var(--secondary-color);
 }
 
+.main-footer h3 {
+  color: var(--white);
+}
+
 .contact-info p {
   margin: 0.5rem 0;
 }
