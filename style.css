@@ -291,3 +291,14 @@ h3 { font-size: 1.4rem; }
 .data-deletion-policy ol, .data-deletion-policy ul {
   padding-left: 2rem;
 }
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.store-buttons img {
+  display: block; /* IMPORTANTISSIMO */
+}
