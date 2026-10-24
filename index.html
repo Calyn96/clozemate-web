@@ -3,104 +3,595 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Clozemate - Digitalizza il tuo guardaroba, crea outfit e condividili facilmente. Un'app pensata per chi ama moda e tecnologia." />
-  <meta name="keywords" content="Clozemate, guardaroba digitale, outfit, moda, app fashion, organizzazione armadio" />
-  <meta name="author" content="Giuseppe Maranò & Davide Epifanio" />
-  <title>Clozemate - Reinventa il tuo stile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Clozemate - L'assistente digitale intelligente per il tuo guardaroba personale. Digitalizza i vestiti, crea outfit guidati dal meteo e condividi il tuo stile." />
+  <meta name="keywords" content="Clozemate, CloMatch, guardaroba digitale, outfit builder, moda sostenibile, armadio virtuale, consigli meteo, daltonismo" />
+  <meta name="author" content="Davide Epifanio & Giuseppe Maranò" />
+  <title>Clozemate - Il Tuo Guardaroba Digitale & Smart Outfit Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation Header -->
   <header class="main-header">
-    <div class="container">
-      <nav class="main-nav" aria-label="Navigazione principale">
-        <div class="logo">Clozemate</div>
-        <div class="burger-menu" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#features">Funzionalità</a></li>
-          <li><a href="#download">Download</a></li>
-          <li><a href="#contact">Contatti</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-      </nav>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👗</span> Clozemate
+      </a>
+      <button class="burger-menu" id="burgerMenu" aria-label="Menu di navigazione" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#how-it-works">Come Funziona</a></li>
+        <li><a href="#features">Funzionalità</a></li>
+        <li><a href="#carousel-highlights">In Evidenza</a></li>
+        <li><a href="#sustainability">Sostenibilità</a></li>
+        <li><a href="#download" class="nav-cta">Scarica L'App</a></li>
+      </ul>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero" aria-label="Sezione principale">
-    <div class="container">
-      <h1>il tuo guardaroba digitale.</h1>
-      <p class="subtitle">Usa meglio ciò che hai. Crea il tuo stile con un click. </p>
-      <a href="#download" class="cta-button">Scopri di più</a>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-pill">✨ L'app #1 per la gestione del guardaroba</div>
+        <h1>Il Tuo Guardaroba Digitale. <span class="gradient-text">Il Tuo Stile Inconfondibile.</span></h1>
+        <p class="subtitle">
+          Risolvi ogni giorno il dilemma del <em>"Cosa mi metto?"</em>. Organizza i tuoi vestiti, ricevi abbinamenti intelligenti basati sul meteo reale e condividi il tuo stile consapevole con una community globale.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">Scarica Gratis Ora</a>
+          <a href="#features" class="btn btn-secondary">Scopri Funzionalità</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Valorizzazione Armadio</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">AI</span>
+            <span class="stat-label">Smart Color Match</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">7 Giorni</span>
+            <span class="stat-label">Previsioni & Outfit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Visual Showcase -->
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- Exact App Screen UI based on Real Screenshot -->
+            <div class="app-screen-container">
+              <div class="app-top-bar">
+                <span class="app-user-greeting">Ciao, Giuseppe M.</span>
+                <span class="app-info-icon">ⓘ</span>
+              </div>
+
+              <!-- Weather Banner Widget -->
+              <div class="app-widget widget-weather-banner">
+                <div class="weather-banner-content">
+                  <p class="weather-banner-title">Ottieni suggerimenti in base al meteo nella tua zona</p>
+                  <button class="weather-banner-btn">Scopri il meteo <span>❯</span></button>
+                </div>
+                <div class="weather-banner-sun">☀️</div>
+              </div>
+
+              <!-- Progress Widget -->
+              <div class="app-widget widget-progress">
+                <div class="widget-header">
+                  <span class="widget-title">🏆 Progressi del tuo stile</span>
+                </div>
+                <div class="progress-stats-grid">
+                  <div class="p-stat">
+                    <span class="p-icon">📊</span>
+                    <span class="p-num">1</span>
+                    <span class="p-label">Livello</span>
+                  </div>
+                  <div class="p-stat">
+                    <span class="p-icon">👔</span>
+                    <span class="p-num">9</span>
+                    <span class="p-label">Capi</span>
+                  </div>
+                  <div class="p-stat">
+                    <span class="p-icon">👕</span>
+                    <span class="p-num">1</span>
+                    <span class="p-label">Outfit</span>
+                  </div>
+                  <div class="p-stat">
+                    <span class="p-icon">🩵</span>
+                    <span class="p-num">0</span>
+                    <span class="p-label">Likes</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Top Items Widget -->
+              <div class="app-widget widget-top-items">
+                <div class="widget-header-with-sub">
+                  <div>
+                    <h4 class="widget-title-main">Capi più utilizzati</h4>
+                    <p class="widget-subtitle">I tuoi pezzi preferiti in evidenza</p>
+                  </div>
+                  <span class="widget-sparkle">✨</span>
+                </div>
+                <div class="items-circles-row">
+                  <div class="item-circle-wrapper">
+                    <div class="item-circle jacket-item">🧥</div>
+                    <span class="item-badge">1</span>
+                  </div>
+                  <div class="item-circle-wrapper">
+                    <div class="item-circle shirt-item">👔</div>
+                    <span class="item-badge">1</span>
+                  </div>
+                  <div class="item-circle-wrapper">
+                    <div class="item-circle pants-item">👖</div>
+                    <span class="item-badge">1</span>
+                  </div>
+                </div>
+                <div class="widget-sub-button">
+                  <span class="sub-btn-icon">📊</span>
+                  <span class="sub-btn-text">Ottieni altre statistiche e approfondimenti</span>
+                  <span class="sub-btn-arrow">❯</span>
+                </div>
+              </div>
+
+              <!-- Outfit Builder Widget -->
+              <div class="app-widget widget-outfit-builder">
+                <div class="widget-header-with-sub">
+                  <div>
+                    <h4 class="widget-title-main">Costruisci il tuo Outfit</h4>
+                    <p class="widget-subtitle">Scegli il tuo mood e crea il look perfetto</p>
+                  </div>
+                  <span class="widget-sparkle">👕</span>
+                </div>
+              </div>
+
+              <!-- App Bottom Navigation -->
+              <div class="app-bottom-nav">
+                <div class="nav-item active">
+                  <span class="nav-icon active-icon">🏠</span>
+                  <span class="nav-label">Home</span>
+                </div>
+                <div class="nav-item">
+                  <span class="nav-icon">👔</span>
+                  <span class="nav-label">Wardrobe</span>
+                </div>
+                <div class="nav-item">
+                  <span class="nav-icon">👥</span>
+                  <span class="nav-label">Network</span>
+                </div>
+                <div class="nav-item">
+                  <span class="nav-icon">⚙️</span>
+                  <span class="nav-label">Settings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-floating-badge badge-1">
+          <span>🎨 Modalità Daltonismo Integrata</span>
+        </div>
+        <div class="visual-floating-badge badge-2">
+          <span>🏆 Sblocca Trofei Eco</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main id="features" aria-labelledby="features-title">
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works-section">
     <div class="container">
-      <h2 id="features-title" class="section-title">Funzionalità principali</h2>
+      <div class="section-header">
+        <span class="section-tag">Semplice & Veloce</span>
+        <h2 class="section-title">Come Funziona Clozemate in 3 Passi</h2>
+        <p class="section-subtitle">Dalla digitalizzazione al look perfetto per qualsiasi occasione.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📸</div>
+          <h3>Fotografa & Catalogare</h3>
+          <p>Scatta una foto ai tuoi vestiti. L'IA di Clozemate riconosce ed etichetta in automatico categoria, colore, stagione e brand in pochi secondi.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">🌤️</div>
+          <h3>Genera con Meteo & AI</h3>
+          <p>Ricevi suggerimenti su misura basati sul meteo reale della tua città, oppure usa la ruota dei colori e il tasto Randomize per abbinamenti perfetti.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">🏆</div>
+          <h3>Indossa & Condividi</h3>
+          <p>Traccia il costo per utilizzo dei tuoi capi, riduci lo spreco, accumula punti XP, sblocca trofei e condividi i tuoi look nel feed social.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Architettura Integrata</span>
+        <h2 class="section-title">Tutto Ciò che Serve al Tuo Stile</h2>
+        <p class="section-subtitle">Scopri le funzionalità avanzate che rendono Clozemate l'assistente per il guardaroba definitivo.</p>
+      </div>
+
       <div class="features-grid">
         <article class="feature-card">
-          <div class="feature-icon">📷</div>
-          <h3>Digitalizza il Tuo Guardaroba</h3>
-          <p>Scatta una foto ai tuoi capi e lascia che Clozemate li organizzi per te. Il tuo armadio, sempre in tasca.</p>
+          <div class="feature-icon-wrapper gradient-1">🧥</div>
+          <h3>Guardaroba Smart & Wishlist</h3>
+          <p>Vista a griglia/lista, filtri avanzati per colore, stagione e marchio. Gestisci capi preferiti, archiviati e una Wishlist con supporto integrato ad Amazon e Zalando.</p>
         </article>
-        <article class="feature-card">
-          <div class="feature-icon">✨</div>
-          <h3>Crea e Condividi Outfit</h3>
-          <p>Sperimenta nuovi abbinamenti con i tuoi vestiti. Crea l'outfit perfetto e condividilo con i tuoi amici.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <h3>Design Accessibile</h3>
-          <p>Abbiamo a cuore l'accessibilità. Clozemate include temi ottimizzati per diverse forme di daltonismo.</p>
-        </article>
-      </div>
-    </div>
-  </main>
 
-  <section id="download" class="about-section" aria-labelledby="about-title">
-    <div class="container">
-      <h2 id="about-title" class="section-title">Download</h2>
-      <p>Clozemate è un'idea di 
-        <strong>Davide Epifanio</strong> sviluppata da 
-        <strong>Giuseppe Maranò</strong>, 
-        due amici uniti dalla visione di combinare tecnologia e moda. 
-        La nostra missione è rendere l'organizzazione del guardaroba divertente e accessibile a tutti.
-        Scarica Clozemate ora, disponibile per <strong>Android, iOS e macOS</strong>.
-      </p>
-      <div class="store-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.clozemate.app&pcampaignid=web_share" target="_blank">
-          <img src="GetItOnGooglePlay.svg" alt="Disponibile su Google Play" style="width: 200px; margin-top: 20px;">
-        </a>
-        <a href="https://apps.apple.com/it/app/clozemate/id6755937287" target="_blank">
-          <img src="Download_on_the_App_Store.svg" alt="Disponibile su Google Play" style="width: 178px; margin-top: 20px;">
-        </a>
+        <article class="feature-card">
+          <div class="feature-icon-wrapper gradient-2">✨</div>
+          <h3>Outfit Builder & Match Colori</h3>
+          <p>Componi slot interattivi (Testa, Busto, Gambe, Piedi). L'algoritmo calcola la compatibilità cromatiche con indicatore visivo (🟢 Verde, 🟡 Giallo, 🔴 Rosso) e genera look casuali coordinati.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper gradient-3">🌤️</div>
+          <h3>Meteo 7 Giorni & Cards 3D</h3>
+          <p>Previsioni meteorologiche dettagliate con card 3D interattive ad effetto flip: ruota la card per scoprire il consiglio personalizzato dei capi ideali presenti nel tuo armadio.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper gradient-4">👥</div>
+          <h3>Community & Social Feed</h3>
+          <p>Pubblica i tuoi look su Cloudinary in alta risoluzione. Esplora il feed Globale o Amici, cerca hashtag popolari (<code>#casual</code>, <code>#office</code>) e lasciati ispirare.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper gradient-5">🏆</div>
+          <h3>Gamification & Sistema XP</h3>
+          <p>Riduci i vestiti mai usati, crea outfit quotidiani e guadagna punti esperienza. Sblocca trofei a 4 livelli (Bronzo, Argento, Oro, Platino) per premiare la sostenibilità.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper gradient-6">🎨</div>
+          <h3>Accessibilità & Daltonismo</h3>
+          <p>La prima app di fashion management con supporto nativo integrato ai filtri cromatici per Protanopia, Deuteranopia e Tritanopia, oltre a Dark Mode nativa.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <footer id="contact" class="main-footer" aria-labelledby="contact-title">
+  <!-- Interactive Weather Card Flip Showcase -->
+  <section class="interactive-flip-section">
+    <div class="container flip-container">
+      <div class="flip-text">
+        <span class="section-tag">Prova l'esperienza</span>
+        <h2>Meteo-Driven Styling & Cards 3D</h2>
+        <p>Tocca o passa sopra la card per vedere l'effetto flip: scopri come Clozemate trasforma le previsioni del tempo in consigli pratici presi direttamente dal tuo armadio.</p>
+      </div>
+      <div class="flip-card-wrapper" tabindex="0" aria-label="Carta Meteo 3D interattiva">
+        <div class="flip-card-inner" id="interactiveCard">
+          <!-- Front Side -->
+          <div class="flip-card-front">
+            <div class="flip-header">
+              <span>📍 Roma</span>
+              <span>Oggi</span>
+            </div>
+            <div class="flip-weather-main">
+              <span class="weather-big-icon">🌧️</span>
+              <div class="weather-temp-group">
+                <span class="temp-current">14°C</span>
+                <span class="temp-range">Min: 10°C • Max: 16°C</span>
+              </div>
+            </div>
+            <p class="weather-desc">Pioggia leggera e vento moderato in giornata.</p>
+            <div class="flip-hint">👆 Clicca per ruotare e vedere il consiglio</div>
+          </div>
+          <!-- Back Side -->
+          <div class="flip-card-back">
+            <div class="flip-header">
+              <span>💡 Consiglio Clozemate</span>
+              <span>Match 100%</span>
+            </div>
+            <div class="suggested-items">
+              <div class="item-chip">🧥 Impermeabile Trench NERO</div>
+              <div class="item-chip">🥾 Stivaletti in Pelle</div>
+              <div class="item-chip">🧣 Sciarpa in Lana</div>
+            </div>
+            <p class="suggestion-text">"Piove! Sfrutta il Trench impermeabile archiviato di recente con gli stivaletti impermeabili."</p>
+            <a href="#download" class="flip-cta">Crea questo Outfit in-App</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Carousel Section (Highlight Box Rotator) -->
+  <section id="carousel-highlights" class="carousel-section">
     <div class="container">
-      <h3 id="contact-title">Contattaci</h3>
-      <div class="contact-info">
-        <p>Per informazioni contattaci su:</p>
-        <p><a href="mailto:info@clozemate.it">info@clozemate.it</a></p>
-        <a href="https://www.instagram.com/clozemate">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-          </svg>
+      <div class="section-header">
+        <span class="section-tag">Esplora Clozemate</span>
+        <h2 class="section-title">Esperienze In Evidenza</h2>
+        <p class="section-subtitle">Scorri le card per esplorare in dettaglio i moduli principali dell'applicazione.</p>
+      </div>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" id="carouselPrev" aria-label="Card precedente">❮</button>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carouselTrack">
+
+            <!-- Carousel Item 1 -->
+            <div class="carousel-slide active">
+              <div class="carousel-card card-mood">
+                <div class="carousel-card-badge">Mood & Occasioni</div>
+                <div class="carousel-icon">💼</div>
+                <h3>Outfit Guidati per Ogni Evento</h3>
+                <p>Generazione immediata e guidata per <strong>Ufficio</strong>, <strong>Serata tra amici</strong>, <strong>Appuntamento</strong>, <strong>Palestra</strong> o <strong>Eventi Formali</strong>. Fatti guidare dall'ispirazione al mattino.</p>
+                <div class="carousel-card-footer">
+                  <span>⚡ Selezione rapida con 1-click</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 2 -->
+            <div class="carousel-slide">
+              <div class="carousel-card card-eco">
+                <div class="carousel-card-badge">Eco & Analytics</div>
+                <div class="carousel-icon">📊</div>
+                <h3>Statistiche Avanzate Armadio</h3>
+                <p>Monitora il valore totale del tuo guardaroba, la percentuale di capi mai indossati, la spesa negli ultimi 30 giorni e calcola il <strong>Costo Medio per Utilizzo (€/wear)</strong>.</p>
+                <div class="carousel-card-footer">
+                  <span>🌿 Riduci gli sprechi della Fast Fashion</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 3 -->
+            <div class="carousel-slide">
+              <div class="carousel-card card-accessibility">
+                <div class="carousel-card-badge">Inclusività</div>
+                <div class="carousel-icon">👁️</div>
+                <h3>Supporto Daltonismo Integrato</h3>
+                <p>Palette cromatiche accessibili e filtri dedicati a <strong>Protanopia</strong>, <strong>Deuteranopia</strong> e <strong>Tritanopia</strong>. Nessun limite nella percezione delle combinazioni dei tuoi vestiti.</p>
+                <div class="carousel-card-footer">
+                  <span>🎨 Moda davvero per tutti</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 4 -->
+            <div class="carousel-slide">
+              <div class="carousel-card card-social">
+                <div class="carousel-card-badge">Community</div>
+                <div class="carousel-icon">📸</div>
+                <h3>Feed Social & Hashtag Search</h3>
+                <p>Condividi le tue creazioni, scopri i trend della community, invia e ricevi richieste di amicizia, e naviga per hashtag popolari per trovare l'ispirazione quotidiana.</p>
+                <div class="carousel-card-footer">
+                  <span>💬 Like, commenti e profili</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 5 -->
+            <div class="carousel-slide">
+              <div class="carousel-card card-trophy">
+                <div class="carousel-card-badge">Gamification</div>
+                <div class="carousel-icon">🏆</div>
+                <h3>Sistema Trofei & Livelli XP</h3>
+                <p>Guadagna XP ad ogni outfit creato e sblocca badge di livello Bronzo, Argento, Oro e Platino per obiettivi come <em>"Guardaroba Attivo"</em> o <em>"Esploratore di Stili"</em>.</p>
+                <div class="carousel-card-footer">
+                  <span>⭐ Trasforma il tuo look in un gioco</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" id="carouselNext" aria-label="Card successiva">❯</button>
+      </div>
+
+      <!-- Carousel Pagination Dots -->
+      <div class="carousel-dots" id="carouselDots">
+        <button class="dot active" data-slide="0" aria-label="Vai a diapositiva 1"></button>
+        <button class="dot" data-slide="1" aria-label="Vai a diapositiva 2"></button>
+        <button class="dot" data-slide="2" aria-label="Vai a diapositiva 3"></button>
+        <button class="dot" data-slide="3" aria-label="Vai a diapositiva 4"></button>
+        <button class="dot" data-slide="4" aria-label="Vai a diapositiva 5"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability & Eco Section -->
+  <section id="sustainability" class="sustainability-section">
+    <div class="container sustain-grid">
+      <div class="sustain-content">
+        <span class="section-tag">Moda Sostenibile</span>
+        <h2>Usa il 100% del tuo Armadio. Riduci gli Sprechi.</h2>
+        <p>
+          Si stima che in media indossiamo solo il 20% dei vestiti che possediamo. Clozemate nasce per ridare valore a ciò che è già presente nel tuo armadio, stimolando la creatività e combattendo la cultura dell'acquisto compulsivo.
+        </p>
+        <ul class="sustain-list">
+          <li><strong>Meno capi dimenticati:</strong> Ricevi promemoria ed alert sui capi inutilizzati.</li>
+          <li><strong>Acquisti più consapevoli:</strong> Consulta il costo medio per utilizzo prima di comprare.</li>
+          <li><strong>Wishlist integrata:</strong> Salva prodotti da Amazon/Zalando ed evita acquisti doppioni.</li>
+        </ul>
+      </div>
+      <div class="sustain-card-box">
+        <div class="sustain-metric">
+          <span class="metric-num">-80%</span>
+          <span class="metric-text">Spreco di vestiti mai indossati</span>
+        </div>
+        <div class="sustain-metric">
+          <span class="metric-num">€/wear</span>
+          <span class="metric-text">Calcolo preciso del ritorno d'investimento dei capi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Call To Action Section -->
+  <section id="download" class="download-section">
+    <div class="container download-box">
+      <h2>Pronto a Trasformare il Tuo Guardaroba?</h2>
+      <p class="download-desc">
+        Clozemate è un'idea di <strong>Davide Epifanio</strong> sviluppata da <strong>Giuseppe Maranò</strong>.
+        Scarica l'applicazione e inizia oggi stesso a vestirti meglio, risparmiare tempo e divertirti con la moda.
+      </p>
+
+      <div class="store-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.clozemate.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="store-link">
+          <img src="GetItOnGooglePlay.svg" alt="Disponibile su Google Play" class="store-badge">
+        </a>
+        <a href="https://apps.apple.com/it/app/clozemate/id6755937287" target="_blank" rel="noopener noreferrer" class="store-link">
+          <img src="Download_on_the_App_Store.svg" alt="Scarica su App Store" class="store-badge">
         </a>
       </div>
-      <p class="copyright">&copy; 2025 Clozemate. Sviluppato da Davide Epifanio & Giuseppe Maranò
-      </p>
-      <p><a href="privacy.html">Privacy Policy</a> | <a href="data-deletion.html">Richiesta Eliminazione Dati</a></p>
+      <p class="platforms-note">Disponibile per iOS, Android e macOS.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo light">👗 Clozemate</div>
+        <p>L'assistente digitale intelligente per il guardaroba e lo stile quotidiano.</p>
+        <p class="credits">&copy; 2025 Clozemate.<br>Ideato da <strong>Davide Epifanio</strong>, Sviluppato da <strong>Giuseppe Maranò</strong>.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Link Rapidi</h4>
+        <ul>
+          <li><a href="#how-it-works">Come Funziona</a></li>
+          <li><a href="#features">Funzionalità</a></li>
+          <li><a href="#carousel-highlights">In Evidenza</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal">
+        <h4>Note Legali & Privacy</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy & Cookie Policy</a></li>
+          <li><a href="data-deletion.html">Richiesta Eliminazione Dati</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contattaci</h4>
+        <p>Email di supporto:</p>
+        <a href="mailto:info@clozemate.it" class="contact-email">info@clozemate.it</a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/clozemate" target="_blank" rel="noopener noreferrer" aria-label="Profilo Instagram Clozemate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // Navigation Toggle for Mobile
     function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
+      const navLinks = document.getElementById('navLinks');
+      const burgerMenu = document.getElementById('burgerMenu');
+      navLinks.classList.toggle('active');
+      burgerMenu.classList.toggle('active');
     }
+
+    // Close menu when clicking links
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+        document.getElementById('burgerMenu').classList.remove('active');
+      });
+    });
+
+    // Interactive 3D Weather Card Flip Toggle on click
+    const interactiveCard = document.getElementById('interactiveCard');
+    if (interactiveCard) {
+      interactiveCard.parentElement.addEventListener('click', () => {
+        interactiveCard.classList.toggle('flipped');
+      });
+    }
+
+    // Carousel Implementation
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('carouselTrack');
+      const slides = Array.from(track.children);
+      const nextBtn = document.getElementById('carouselNext');
+      const prevBtn = document.getElementById('carouselPrev');
+      const dotsNav = document.getElementById('carouselDots');
+      const dots = Array.from(dotsNav.children);
+
+      let currentIndex = 0;
+      let autoplayTimer = null;
+
+      function updateCarousel(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        currentIndex = index;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === currentIndex);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        updateCarousel(currentIndex + 1);
+        resetAutoplay();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        updateCarousel(currentIndex - 1);
+        resetAutoplay();
+      });
+
+      dotsNav.addEventListener('click', (e) => {
+        const targetDot = e.target.closest('button');
+        if (!targetDot) return;
+        const targetIndex = parseInt(targetDot.getAttribute('data-slide'));
+        updateCarousel(targetIndex);
+        resetAutoplay();
+      });
+
+      function startAutoplay() {
+        autoplayTimer = setInterval(() => {
+          updateCarousel(currentIndex + 1);
+        }, 4000);
+      }
+
+      function resetAutoplay() {
+        clearInterval(autoplayTimer);
+        startAutoplay();
+      }
+
+      // Pause on mouse hover / touch
+      const carouselContainer = document.querySelector('.carousel-container');
+      carouselContainer.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+      carouselContainer.addEventListener('mouseleave', () => startAutoplay());
+
+      // Start initial autoplay
+      startAutoplay();
+    });
   </script>
 </body>
 </html>
