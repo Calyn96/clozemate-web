@@ -67,8 +67,8 @@ ul {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 92%;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -224,7 +224,7 @@ ul {
 
 .hero h1 {
   color: var(--white);
-  font-size: 3.25rem;
+  font-size: 3.5rem;
   margin-bottom: 1.25rem;
   letter-spacing: -1px;
 }
@@ -309,33 +309,35 @@ ul {
 }
 
 .phone-mockup {
-  width: 310px;
-  height: 610px;
+  width: 350px;
+  max-width: 100%;
+  height: 680px;
   background: #090d16;
-  border: 11px solid #334155;
-  border-radius: 46px;
+  border: 12px solid #334155;
+  border-radius: 48px;
   box-shadow: var(--shadow-glow), 0 30px 60px rgba(0,0,0,0.5);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .phone-notch {
-  width: 120px;
-  height: 20px;
+  width: 130px;
+  height: 22px;
   background: #334155;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   z-index: 10;
 }
 
 .phone-screen {
-  padding: 1.8rem 0.65rem 0.5rem;
+  padding: 2.2rem 0.85rem 0.6rem;
   background: #0d0f12;
   height: 100%;
   display: flex;
@@ -345,7 +347,7 @@ ul {
 .app-screen-container {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.8rem;
   height: 100%;
 }
 
@@ -353,25 +355,25 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 0.25rem 0.1rem;
+  padding: 0.2rem 0.3rem 0.1rem;
 }
 
 .app-user-greeting {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #ffffff;
   font-family: var(--font-sans);
 }
 
 .app-info-icon {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #94a3b8;
 }
 
 /* App Widgets Styling */
 .app-widget {
-  border-radius: 16px;
-  padding: 0.7rem 0.85rem;
+  border-radius: 18px;
+  padding: 0.85rem 1rem;
   color: #ffffff;
 }
 
@@ -391,7 +393,7 @@ ul {
 }
 
 .weather-banner-title {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   line-height: 1.35;
   color: #ffffff;
@@ -403,8 +405,8 @@ ul {
   color: #4282f4;
   border: none;
   border-radius: var(--radius-pill);
-  padding: 4px 11px;
-  font-size: 0.65rem;
+  padding: 5px 13px;
+  font-size: 0.72rem;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
@@ -413,21 +415,21 @@ ul {
 }
 
 .weather-banner-sun {
-  font-size: 1.8rem;
+  font-size: 2rem;
   opacity: 0.95;
 }
 
 .widget-progress {
   background: #18202a;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .widget-header {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .widget-title {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: #cbd5e1;
 }
@@ -443,32 +445,32 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 }
 
 .p-icon {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   opacity: 0.85;
 }
 
 .p-num {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #ffffff;
   font-family: var(--font-heading);
 }
 
 .p-label {
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   color: #94a3b8;
 }
 
 .widget-top-items {
   background: #18202a;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.7rem;
 }
 
 .widget-header-with-sub {
@@ -478,26 +480,26 @@ ul {
 }
 
 .widget-title-main {
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 800;
   color: #ffffff;
 }
 
 .widget-subtitle {
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   color: #94a3b8;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .widget-sparkle {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #38bdf8;
 }
 
 .items-circles-row {
   display: flex;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 1.4rem;
   margin: 0.2rem 0;
 }
 
@@ -506,14 +508,14 @@ ul {
 }
 
 .item-circle {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #2a3441;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -527,10 +529,10 @@ ul {
   right: -4px;
   background: #38bdf8;
   color: #0d0f12;
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -539,30 +541,30 @@ ul {
 }
 
 .widget-sub-button {
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   color: #cbd5e1;
 }
 
 .sub-btn-text {
   flex-grow: 1;
-  margin: 0 6px;
-  font-size: 0.6rem;
+  margin: 0 8px;
+  font-size: 0.7rem;
 }
 
 .sub-btn-arrow {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: #94a3b8;
 }
 
 .widget-outfit-builder {
   background: #18202a;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .app-bottom-nav {
@@ -571,36 +573,36 @@ ul {
   justify-content: space-around;
   align-items: center;
   background: #0d0f12;
-  padding: 8px 4px 4px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 6px 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 }
 
 .nav-icon {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #94a3b8;
 }
 
 .nav-icon.active-icon {
   background: #38bdf8;
   color: #0d0f12;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .nav-label {
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   color: #94a3b8;
 }
 
@@ -916,11 +918,14 @@ ul {
 
 .carousel-track {
   display: flex;
+  width: 100%;
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .carousel-slide {
+  flex: 0 0 100%;
   min-width: 100%;
+  box-sizing: border-box;
   padding: 3rem 3.5rem;
 }
 
@@ -1278,4 +1283,42 @@ ul {
   .badge-1, .badge-2 {
     display: none;
   }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active, .reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Glowing pulse on CTA */
+.btn-primary.glow-pulse {
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(79, 70, 229, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
 }

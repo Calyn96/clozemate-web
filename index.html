@@ -190,25 +190,25 @@
   <!-- How It Works Section -->
   <section id="how-it-works" class="how-it-works-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">Semplice & Veloce</span>
         <h2 class="section-title">Come Funziona Clozemate in 3 Passi</h2>
         <p class="section-subtitle">Dalla digitalizzazione al look perfetto per qualsiasi occasione.</p>
       </div>
       <div class="steps-grid">
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-number">01</div>
           <div class="step-icon">📸</div>
           <h3>Fotografa & Catalogare</h3>
           <p>Scatta una foto ai tuoi vestiti. L'IA di Clozemate riconosce ed etichetta in automatico categoria, colore, stagione e brand in pochi secondi.</p>
         </div>
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-number">02</div>
           <div class="step-icon">🌤️</div>
           <h3>Genera con Meteo & AI</h3>
           <p>Ricevi suggerimenti su misura basati sul meteo reale della tua città, oppure usa la ruota dei colori e il tasto Randomize per abbinamenti perfetti.</p>
         </div>
-        <div class="step-card">
+        <div class="step-card reveal">
           <div class="step-number">03</div>
           <div class="step-icon">🏆</div>
           <h3>Indossa & Condividi</h3>
@@ -221,44 +221,44 @@
   <!-- Main Features Section -->
   <section id="features" class="features-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">Architettura Integrata</span>
         <h2 class="section-title">Tutto Ciò che Serve al Tuo Stile</h2>
         <p class="section-subtitle">Scopri le funzionalità avanzate che rendono Clozemate l'assistente per il guardaroba definitivo.</p>
       </div>
 
       <div class="features-grid">
-        <article class="feature-card">
+        <article class="feature-card reveal">
           <div class="feature-icon-wrapper gradient-1">🧥</div>
           <h3>Guardaroba Smart & Wishlist</h3>
           <p>Vista a griglia/lista, filtri avanzati per colore, stagione e marchio. Gestisci capi preferiti, archiviati e una Wishlist con supporto integrato ad Amazon e Zalando.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card reveal">
           <div class="feature-icon-wrapper gradient-2">✨</div>
           <h3>Outfit Builder & Match Colori</h3>
           <p>Componi slot interattivi (Testa, Busto, Gambe, Piedi). L'algoritmo calcola la compatibilità cromatiche con indicatore visivo (🟢 Verde, 🟡 Giallo, 🔴 Rosso) e genera look casuali coordinati.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card reveal">
           <div class="feature-icon-wrapper gradient-3">🌤️</div>
           <h3>Meteo 7 Giorni & Cards 3D</h3>
           <p>Previsioni meteorologiche dettagliate con card 3D interattive ad effetto flip: ruota la card per scoprire il consiglio personalizzato dei capi ideali presenti nel tuo armadio.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card reveal">
           <div class="feature-icon-wrapper gradient-4">👥</div>
           <h3>Community & Social Feed</h3>
           <p>Pubblica i tuoi look su Cloudinary in alta risoluzione. Esplora il feed Globale o Amici, cerca hashtag popolari (<code>#casual</code>, <code>#office</code>) e lasciati ispirare.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card reveal">
           <div class="feature-icon-wrapper gradient-5">🏆</div>
           <h3>Gamification & Sistema XP</h3>
           <p>Riduci i vestiti mai usati, crea outfit quotidiani e guadagna punti esperienza. Sblocca trofei a 4 livelli (Bronzo, Argento, Oro, Platino) per premiare la sostenibilità.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card reveal">
           <div class="feature-icon-wrapper gradient-6">🎨</div>
           <h3>Accessibilità & Daltonismo</h3>
           <p>La prima app di fashion management con supporto nativo integrato ai filtri cromatici per Protanopia, Deuteranopia e Tritanopia, oltre a Dark Mode nativa.</p>
@@ -411,7 +411,7 @@
 
   <!-- Sustainability & Eco Section -->
   <section id="sustainability" class="sustainability-section">
-    <div class="container sustain-grid">
+    <div class="container sustain-grid reveal">
       <div class="sustain-content">
         <span class="section-tag">Moda Sostenibile</span>
         <h2>Usa il 100% del tuo Armadio. Riduci gli Sprechi.</h2>
@@ -439,7 +439,7 @@
 
   <!-- Download & Call To Action Section -->
   <section id="download" class="download-section">
-    <div class="container download-box">
+    <div class="container download-box reveal">
       <h2>Pronto a Trasformare il Tuo Guardaroba?</h2>
       <p class="download-desc">
         Clozemate è un'idea di <strong>Davide Epifanio</strong> sviluppata da <strong>Giuseppe Maranò</strong>.
@@ -591,6 +591,22 @@
 
       // Start initial autoplay
       startAutoplay();
+
+      // Scroll Reveal Intersection Observer
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
     });
   </script>
 </body>
